@@ -53,6 +53,14 @@ import {
   verifiers,
 } from '@opentimestamps/typescript-opentimestamps';
 
+type VerificationResult = {
+  attestations: Record<number, string[]>;
+  errors: Record<string, Error[]>;
+};
+
+type AttestationEntry = [string, string[]];
+type ErrorEntry = [string, Error[]];
+
 const rawTimestamp: Uint8Array = Uint8Array.from(someTimestampBytes);
 const timestamp: Timestamp = read(rawTimestamp);
 
@@ -60,15 +68,13 @@ verify(
   timestamp,
   verifiers,
 ).then(
-  ({ attestations,  errors }: { attestations: Record<number, string[]>; errors: Record<string, Error[]> }): void => {
-    Object.entries(attestations).forEach(([time, verifiers]: [string, string[]]): void => {
-      console.log(`Verifiers ${verifiers.join(', ')} attest to this timestamp as of ${time}`);
-    });
-    Object.entries(errors).forEach(([verifier, errorList]: [string, Error[]]): void => {
+  ({ attestations,  errors }: VerificationResult): void => {
+    Object.entries(attestations).forEach(([time, verifiers]: AttestationEntry): void =>
+      console.log(`Verifiers ${verifiers.join(', ')} attest to this timestamp as of ${time}`)
+    );
+    Object.entries(errors).forEach(([verifier, errorList]: ErrorEntry): void => {
       console.log(`${verifier} reported the following errors:`);
-      errorList.forEach((error: Error): void => {
-        console.log(error.message);
-      });
+      errorList.forEach((error: Error): void => console.log(error.message));
     });
   },
 );
