@@ -1,0 +1,61 @@
+{
+  "$schema": "https://typedoc.org/schema.json",
+  "includeVersion": true,
+  "plugin": [
+    "typedoc-plugin-keywords",
+    "typedoc-plugin-katex",
+    "typedoc-plugin-mdn-links",
+    "typedoc-plugin-mermaid",
+    "typedoc-plugin-remove-references"
+  ],
+  "katex": {
+    "options": {
+      "delimiters": [
+        {
+          "left": "$$",
+          "right": "$$",
+          "display": true
+        },
+        {
+          "left": "$",
+          "right": "$",
+          "display": false
+        }
+      ]
+    }
+  },
+  "keywords": ["OpenTimestamps", "library"],
+  "markdownItOptions": {
+    "html": true,
+    "linkify": true,
+    "typographer": true
+  },
+  "highlightLanguages": ["ini", "perl", "sh", "typescript"],
+  "pretty": true,
+  "sourceLinkExternal": true,
+  "hideParameterTypesInTitle": false,
+  "excludePrivate": true,
+  "cleanOutputDir": true,
+  "hideGenerator": true,
+  "searchInComments": true,
+  "navigationLinks": {
+    "OpenTimestamps": "https://opentimestamps.org"
+  },
+  "visibilityFilters": {},
+  "validation": {
+    "notExported": true,
+    "invalidLink": true,
+    "notDocumented": false
+  },
+  "externalSymbolLinkMappings": {
+    "typescript": {
+      "RequestInit": "https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options"
+    }
+  },
+  "treatWarningsAsErrors": false,
+  "treatValidationWarningsAsErrors": false,
+  "logLevel": "Verbose",
+  "disableSources": false,
+  "tsconfig": "./tsconfig.build.json",
+  "customCss": "./typedoc-tweaks.css"
+}

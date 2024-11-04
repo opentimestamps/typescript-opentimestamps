@@ -1,0 +1,98 @@
+{
+  "name": "@opentimestamps/typescript-opentimestamps",
+  "version": "0.1.0",
+  "description": "An OpenTimestamps client written in TypeScript",
+  "keywords": [
+    "OpenTimestamps"
+  ],
+  "license": "LGPL-3.0-or-later",
+  "homepage": "https://opentimestamps.org/",
+  "bugs": {
+    "url": "https://github.com/opentimestamps/typescript-opentimestamps/issues"
+  },
+  "repository": "github:opentimestamps/typescript-opentimestamps",
+  "author": {
+    "name": "La Crypta",
+    "url": "https://lacrypta.ar",
+    "email": "info@lacrypta.ar"
+  },
+  "contributors": [],
+  "files": [
+    "dist/types",
+    "dist/esm",
+    "dist/umd"
+  ],
+  "types": "./dist/types/index.d.ts",
+  "main": "./dist/esm/index.js",
+  "module": "./dist/esm/index.js",
+  "browser": "./dist/esm/index.js",
+  "esnext": "./dist/esm/index.js",
+  "es2015": "./dist/esm/index.js",
+  "esm": "./dist/esm/index.js",
+  "module-browser": "./dist/esm/index.js",
+  "source": "./dist/esm/index.js",
+  "unpkg": "./dist/umd/index.min.js",
+  "jsdelivr": "./dist/umd/index.min.js",
+  "exports": {
+    "types": "./dist/types/index.d.ts",
+    "umd": "./dist/umd/index.js",
+    "require": "./dist/cjs/index.cjs",
+    "default": "./dist/esm/index.js"
+  },
+  "sideEffects": false,
+  "type": "module",
+  "scripts": {
+    "prepare": "husky",
+    "postinstall": "mkdir -p ./dist/cjs && ln -sf ../umd/index.min.js ./dist/cjs/index.min.cjs && ln -sf ../umd/index.js ./dist/cjs/index.cjs",
+    "mdlint": "markdownlint . .github -i node_modules -c ./etc/.markdownlint.jsonc",
+    "mdlint:fix": "pnpm run mdlint --fix",
+    "lint": "eslint src test --config ./etc/eslint.config.js --no-error-on-unmatched-pattern",
+    "lint:fix": "pnpm run lint --fix",
+    "prettier": "prettier etc src test --config ./etc/.prettierrc.json --no-error-on-unmatched-pattern --check",
+    "prettier:fix": "pnpm run prettier --write",
+    "format": "pnpm run prettier:fix && pnpm run lint:fix && pnpm run mdlint:fix",
+    "build": "pnpm run build:code && pnpm run build:types",
+    "build:code": "node ./etc/build && pnpm run postinstall",
+    "build:types": "tsc --build --verbose ./etc/tsconfig.build.json",
+    "analyze": "node ./etc/analyze",
+    "doc": "pnpm doc:api && pnpm run doc:internal",
+    "doc:api": "typedoc --options ./etc/typedoc.api.json",
+    "doc:internal": "typedoc --options ./etc/typedoc.internal.json",
+    "clean": "rm -rf dist",
+    "test": "jest --runInBand --config=./etc/jest.unit.config.cjs",
+    "test:meta": "jest --runInBand --config=./etc/jest.meta.config.cjs",
+    "test:regression": "jest --runInBand --config=./etc/jest.regression.config.cjs",
+    "reset": "pnpm clean && rm -rf node_modules && rm -f pnpm-lock.yaml"
+  },
+  "devDependencies": {
+    "@opentimestamps/typescript-opentimestamps": "link:",
+    "@types/jest": "^29.5.14",
+    "@typescript-eslint/eslint-plugin": "^8.12.2",
+    "@typescript-eslint/parser": "^8.12.2",
+    "esbuild": "^0.24.0",
+    "esbuild-plugin-umd-wrapper": "^3.0.0",
+    "eslint": "^9.14.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-import-resolver-typescript": "^3.6.3",
+    "eslint-plugin-import": "^2.31.0",
+    "husky": "^9.1.6",
+    "jest": "^29.7.0",
+    "markdownlint-cli": "^0.42.0",
+    "prettier": "^3.3.3",
+    "ts-jest": "^29.2.5",
+    "tsx": "^4.19.2",
+    "typedoc": "^0.26.11",
+    "typedoc-plugin-katex": "^0.1.2",
+    "typedoc-plugin-keywords": "^1.6.0",
+    "typedoc-plugin-mdn-links": "^3.3.6",
+    "typedoc-plugin-mermaid": "^1.12.0",
+    "typedoc-plugin-remove-references": "^0.0.6",
+    "typescript": "^5.6.3"
+  },
+  "peerDependencies": {
+    "typescript": ">=5.0.0"
+  },
+  "dependencies": {
+    "@noble/hashes": "^1.5.0"
+  }
+}
