@@ -68,7 +68,7 @@
   "devDependencies": {
     "@opentimestamps/typescript-opentimestamps": "link:",
     "@types/jest": "^29.5.14",
-    "@typescript-eslint/eslint-plugin": "^8.13.0",
+    "@typescript-eslint/eslint-plugin": "^8.16.0",
     "@typescript-eslint/parser": "^8.13.0",
     "esbuild": "^0.24.0",
     "esbuild-plugin-umd-wrapper": "^3.0.0",
