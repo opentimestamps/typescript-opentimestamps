@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@noble/hashes':
-        specifier: ^1.5.0
-        version: 1.5.0
+        specifier: ^1.6.1
+        version: 1.6.1
     devDependencies:
       '@opentimestamps/typescript-opentimestamps':
         specifier: 'link:'
@@ -687,8 +687,8 @@ packages:
   '@jridgewell/trace-mapping@0.3.25':
     resolution: {integrity: sha512-vNk6aEwybGtawWmy/PzwnGDOjCkLWSD2wqvjGGAgOAwCGWySYXfYoxt00IJkTF+8Lb57DwOb3Aa0o9CApepiYQ==, tarball: https://registry.npmjs.org/@jridgewell/trace-mapping/-/trace-mapping-0.3.25.tgz}
 
-  '@noble/hashes@1.5.0':
-    resolution: {integrity: sha512-1j6kQFb7QRru7eKN3ZDvRcP13rugwdxZqCjbiAVZfIJwgj2A65UmT4TgARXGlXgnRkORLTDTrO19ZErt7+QXgA==, tarball: https://registry.npmjs.org/@noble/hashes/-/hashes-1.5.0.tgz}
+  '@noble/hashes@1.6.1':
+    resolution: {integrity: sha512-pq5D8h10hHBjyqX+cfBm0i8JUXJ0UhczFc4r74zbuT9XgewFo2E3J1cOaGtdZynILNmQ685YWGzGE1Zv6io50w==, tarball: https://registry.npmjs.org/@noble/hashes/-/hashes-1.6.1.tgz}
     engines: {node: ^14.21.3 || >=16}
 
   '@nodelib/fs.scandir@2.1.5':
@@ -3150,7 +3150,7 @@ snapshots:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.5.0
 
-  '@noble/hashes@1.5.0': {}
+  '@noble/hashes@1.6.1': {}
 
   '@nodelib/fs.scandir@2.1.5':
     dependencies:
@@ -3855,7 +3855,7 @@ snapshots:
       debug: 4.3.7
       enhanced-resolve: 5.17.1
       eslint: 9.14.0
-      eslint-module-utils: 2.12.0(@typescript-eslint/parser@8.13.0(eslint@9.14.0)(typescript@5.6.3))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.3(@typescript-eslint/parser@8.13.0(eslint@9.14.0)(typescript@5.6.3))(eslint-plugin-import@2.31.0)(eslint@9.14.0))(eslint@9.14.0)
+      eslint-module-utils: 2.12.0(@typescript-eslint/parser@8.13.0(eslint@9.14.0)(typescript@5.6.3))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.3)(eslint@9.14.0)
       fast-glob: 3.3.2
       get-tsconfig: 4.8.1
       is-bun-module: 1.2.1
@@ -3868,7 +3868,7 @@ snapshots:
       - eslint-import-resolver-webpack
       - supports-color
 
-  eslint-module-utils@2.12.0(@typescript-eslint/parser@8.13.0(eslint@9.14.0)(typescript@5.6.3))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.3(@typescript-eslint/parser@8.13.0(eslint@9.14.0)(typescript@5.6.3))(eslint-plugin-import@2.31.0)(eslint@9.14.0))(eslint@9.14.0):
+  eslint-module-utils@2.12.0(@typescript-eslint/parser@8.13.0(eslint@9.14.0)(typescript@5.6.3))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.3)(eslint@9.14.0):
     dependencies:
       debug: 3.2.7
     optionalDependencies:
@@ -3890,7 +3890,7 @@ snapshots:
       doctrine: 2.1.0
       eslint: 9.14.0
       eslint-import-resolver-node: 0.3.9
-      eslint-module-utils: 2.12.0(@typescript-eslint/parser@8.13.0(eslint@9.14.0)(typescript@5.6.3))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.3(@typescript-eslint/parser@8.13.0(eslint@9.14.0)(typescript@5.6.3))(eslint-plugin-import@2.31.0)(eslint@9.14.0))(eslint@9.14.0)
+      eslint-module-utils: 2.12.0(@typescript-eslint/parser@8.13.0(eslint@9.14.0)(typescript@5.6.3))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.3)(eslint@9.14.0)
       hasown: 2.0.2
       is-core-module: 2.15.1
       is-glob: 4.0.3
