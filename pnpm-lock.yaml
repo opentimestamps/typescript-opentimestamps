@@ -70,8 +70,8 @@ importers:
         specifier: ^1.6.0
         version: 1.6.0(typedoc@0.26.11(typescript@5.6.3))
       typedoc-plugin-mdn-links:
-        specifier: ^3.3.6
-        version: 3.3.6(typedoc@0.26.11(typescript@5.6.3))
+        specifier: ^4.0.3
+        version: 4.0.3(typedoc@0.26.11(typescript@5.6.3))
       typedoc-plugin-mermaid:
         specifier: ^1.12.0
         version: 1.12.0(typedoc@0.26.11(typescript@5.6.3))
@@ -2432,10 +2432,10 @@ packages:
     peerDependencies:
       typedoc: ^0.25.4
 
-  typedoc-plugin-mdn-links@3.3.6:
-    resolution: {integrity: sha512-iz/+UBDEDqtymjgO6AQA7P4A/kiGmHVKSStGFz7rueZClfbpYaJB5T+xePMF4i0N7PxWMPrWzQd1+B6pn40w1w==, tarball: https://registry.npmjs.org/typedoc-plugin-mdn-links/-/typedoc-plugin-mdn-links-3.3.6.tgz}
+  typedoc-plugin-mdn-links@4.0.3:
+    resolution: {integrity: sha512-q18V8nXF4MqMBGABPVodfxmU2VLK+C7RpyKgrEGP1oP3MAdavLM8Hmeh7zUJAZ4ky+zotO5ZXfhgChegmaDWug==, tarball: https://registry.npmjs.org/typedoc-plugin-mdn-links/-/typedoc-plugin-mdn-links-4.0.3.tgz}
     peerDependencies:
-      typedoc: '>= 0.23.14 || 0.24.x || 0.25.x || 0.26.x'
+      typedoc: 0.26.x || 0.27.x
 
   typedoc-plugin-mermaid@1.12.0:
     resolution: {integrity: sha512-CRjw29j0YbQEh4ygG7xeGjq8zKUikgd1BBBrW3ttzTeCPLrNKZopWFPd1/leSb9dUEJ3p9exOO84aP4CgjYp3g==, tarball: https://registry.npmjs.org/typedoc-plugin-mermaid/-/typedoc-plugin-mermaid-1.12.0.tgz}
@@ -3855,7 +3855,7 @@ snapshots:
       debug: 4.3.7
       enhanced-resolve: 5.17.1
       eslint: 9.14.0
-      eslint-module-utils: 2.12.0(@typescript-eslint/parser@8.13.0(eslint@9.14.0)(typescript@5.6.3))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.3(@typescript-eslint/parser@8.13.0(eslint@9.14.0)(typescript@5.6.3))(eslint-plugin-import@2.31.0)(eslint@9.14.0))(eslint@9.14.0)
+      eslint-module-utils: 2.12.0(@typescript-eslint/parser@8.13.0(eslint@9.14.0)(typescript@5.6.3))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.3)(eslint@9.14.0)
       fast-glob: 3.3.2
       get-tsconfig: 4.8.1
       is-bun-module: 1.2.1
@@ -3868,7 +3868,7 @@ snapshots:
       - eslint-import-resolver-webpack
       - supports-color
 
-  eslint-module-utils@2.12.0(@typescript-eslint/parser@8.13.0(eslint@9.14.0)(typescript@5.6.3))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.3(@typescript-eslint/parser@8.13.0(eslint@9.14.0)(typescript@5.6.3))(eslint-plugin-import@2.31.0)(eslint@9.14.0))(eslint@9.14.0):
+  eslint-module-utils@2.12.0(@typescript-eslint/parser@8.13.0(eslint@9.14.0)(typescript@5.6.3))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.3)(eslint@9.14.0):
     dependencies:
       debug: 3.2.7
     optionalDependencies:
@@ -3890,7 +3890,7 @@ snapshots:
       doctrine: 2.1.0
       eslint: 9.14.0
       eslint-import-resolver-node: 0.3.9
-      eslint-module-utils: 2.12.0(@typescript-eslint/parser@8.13.0(eslint@9.14.0)(typescript@5.6.3))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.3(@typescript-eslint/parser@8.13.0(eslint@9.14.0)(typescript@5.6.3))(eslint-plugin-import@2.31.0)(eslint@9.14.0))(eslint@9.14.0)
+      eslint-module-utils: 2.12.0(@typescript-eslint/parser@8.13.0(eslint@9.14.0)(typescript@5.6.3))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.3)(eslint@9.14.0)
       hasown: 2.0.2
       is-core-module: 2.15.1
       is-glob: 4.0.3
@@ -5280,7 +5280,7 @@ snapshots:
       typedoc: 0.26.11(typescript@5.6.3)
       typescript: 5.6.3
 
-  typedoc-plugin-mdn-links@3.3.6(typedoc@0.26.11(typescript@5.6.3)):
+  typedoc-plugin-mdn-links@4.0.3(typedoc@0.26.11(typescript@5.6.3)):
     dependencies:
       typedoc: 0.26.11(typescript@5.6.3)
 
